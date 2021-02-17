@@ -44,7 +44,8 @@ public class JobTest {
 
     @Test public void testJobsString() {
         Job testJob1 = new Job("Tester", new Employer("TEST"), new Location("TESTING LAB"), new PositionType("Tester"), new CoreCompetency("TESTING"));
-        assertTrue(testJob1.toString().isBlank());
+        assertEquals(testJob1.toString()," \nID: 1\nName: Tester\nEmployer: TEST\nLocation: TESTING LAB\nPosition Type: Tester\nCore Competency: TESTING\n "
+        );
     }
 
 
